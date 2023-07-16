@@ -9,16 +9,19 @@ const Character = (props) => {
     <div>
     {child.map(val => {
       console.log(val)
-      const character = val;
+      const characterName = val.name;
+      const characterGender = val.gender;
+      // const characterBYear = val[birthyear];
+      const characterAppearance = val.films;
       return (
-        <h1>{character.name}</h1>
+        <h1>{characterName}</h1>
       )
     })}
     </div>
   )
 } 
 
-//aaaa
+//aaaaaa
 
 export default Character
 // Used information from data

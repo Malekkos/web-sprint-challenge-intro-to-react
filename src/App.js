@@ -9,13 +9,19 @@ const [characters, setCharacters] = useState(null)
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   // console.log(characters)
+  
+
 useEffect(() => {
   axios.get("https:swapI.dev/api/people/")
   .then(res => {
     console.log(res);
     setCharacters(res.data)
   })
+  .catch(err => {
+    console.log(err);
+  })
 }, [])
+
   return (
     <div className="App">
       <Character className="Header" child={characters}> Characters</Character>
