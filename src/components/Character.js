@@ -1,6 +1,6 @@
 // Write your Character component here
 import React from "react"
-
+import * as styles from "../Styling/styles"
 const Character = (props) => {
   // console.log(props);
   const { child } = props;
@@ -12,12 +12,19 @@ const Character = (props) => {
       const characterName = val.name;
       const characterGender = val.gender;
       // const characterBYear = val[birthyear];
-      const characterAppearance = val.films;
+      // const characterAppearance = val.films
+      // console.log(characterAppearance)
+      const characterHeight = val.height;
+      const characterWeight = val.mass;
       return (
         <>
-        <h1>{characterName}</h1>
-        <h3>{characterGender}</h3>
-        <h3>{characterAppearance}</h3>
+        <styles.StyledBackground>
+          <styles.StyledName>{characterName}</styles.StyledName>
+          <styles.StyledGender>{characterGender}</styles.StyledGender>
+          <styles.StyledHeight>{characterHeight}</styles.StyledHeight>
+          <styles.StyledWeight>{characterWeight}</styles.StyledWeight>
+          {/* <styles.StyledAppearence>{characterAppearance}</styles.StyledAppearence> */}
+        </styles.StyledBackground>
         </>
       )
     })}
