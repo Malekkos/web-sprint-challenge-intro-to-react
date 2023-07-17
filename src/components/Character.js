@@ -14,7 +14,11 @@ const Character = (props) => {
       // const characterBYear = val[birthyear];
       const characterAppearance = val.films;
       return (
+        <>
         <h1>{characterName}</h1>
+        <h3>{characterGender}</h3>
+        <h3>{characterAppearance}</h3>
+        </>
       )
     })}
     </div>
